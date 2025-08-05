@@ -1,8 +1,7 @@
 package RandomQuestions;
 
 import java.util.Arrays;
-import java.util.HashMap;
-import java.util.OptionalDouble;
+
 
 public class MeanMedianMode {
 
@@ -38,16 +37,16 @@ public class MeanMedianMode {
         int mode = arr[0];
         int maxCount = 0;
 
-        for (int i = 0; i < arr.length; i++) {
+        for (int k : arr) {
             int count = 0;
-            for (int j = 0; j < arr.length; j++) {
-                if (arr[j] == arr[i]) {
+            for (int i : arr) {
+                if (i == k) {
                     count++;
                 }
             }
             if (count > maxCount) {
                 maxCount = count;
-                mode = arr[i];
+                mode = k;
             }
         }
         return mode;
