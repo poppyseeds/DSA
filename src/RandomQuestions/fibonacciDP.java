@@ -14,8 +14,16 @@ public class fibonacciDP {
     }
 
     public static void main(String[] args) {
-        int n = 10;
-        System.out.println("Fibonacci number using DP: " + fib(n));
+        int n = 20;
+
+        long startTime = System.nanoTime();  // Start timer
+
+        int result = fib(n);
+
+        long endTime = System.nanoTime();    // End timer
+
+        System.out.println("Fibonacci(" + n + ") = " + result);
+        System.out.println("Time taken: " + (endTime - startTime) / 1_000_000.0 + " ms");
     }
 }
 
